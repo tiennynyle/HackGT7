@@ -1,0 +1,1348 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "trainByDomain": false,
+          "useStemDict": true
+        },
+        "stemDict": {
+          "me,menu,show,the": {
+            "intent": "menu",
+            "domain": "default"
+          },
+          "can,have,i,menu,the": {
+            "intent": "menu",
+            "domain": "default"
+          },
+          "can,i,menu,see,the": {
+            "intent": "menu",
+            "domain": "default"
+          },
+          "do,have,in,store,this,what,you": {
+            "intent": "menu",
+            "domain": "default"
+          },
+          "menu,pleas,store": {
+            "intent": "menu",
+            "domain": "default"
+          },
+          "ani,do,have,milk,tea,you": {
+            "intent": "milk tea",
+            "domain": "default"
+          },
+          "anyth,do,have,is,sweet,that,you": {
+            "intent": "milk tea",
+            "domain": "default"
+          },
+          "i,milk,tea,want": {
+            "intent": "milk tea",
+            "domain": "default"
+          },
+          "and,anyth,boba,do,has,have,milk,pud,sweet,that,you": {
+            "intent": "milk tea",
+            "domain": "default"
+          },
+          "anyth,cocao,do,have,puff,with,you": {
+            "intent": "chocolate",
+            "domain": "default"
+          },
+          "and,anyth,cocao,do,have,milk,puff,with,you": {
+            "intent": "chocolate",
+            "domain": "default"
+          },
+          "chocol,do,have,you": {
+            "intent": "chocolate",
+            "domain": "default"
+          },
+          "black,i,milk,order,tea,to,want": {
+            "intent": "order_black_milk_tea",
+            "domain": "default"
+          },
+          "a,black,can,have,i,milk,tea": {
+            "intent": "order_black_milk_tea",
+            "domain": "default"
+          },
+          "a,black,can,i,milk,order,tea": {
+            "intent": "order_black_milk_tea",
+            "domain": "default"
+          },
+          "a,black,have,i,may,milk,tea": {
+            "intent": "order_black_milk_tea",
+            "domain": "default"
+          },
+          "i,jasmin,milk,order,tea,to,want": {
+            "intent": "order_jasmine_milk_tea",
+            "domain": "default"
+          },
+          "a,can,have,i,jasmin,milk,tea": {
+            "intent": "order_jasmine_milk_tea",
+            "domain": "default"
+          },
+          "a,can,i,jasmin,milk,order,tea": {
+            "intent": "order_jasmine_milk_tea",
+            "domain": "default"
+          },
+          "a,have,i,jasmin,may,milk,tea": {
+            "intent": "order_jasmine_milk_tea",
+            "domain": "default"
+          },
+          "i,matcha,order,snow,to,want": {
+            "intent": "order_matcha_snow",
+            "domain": "default"
+          },
+          "a,can,have,i,matcha,snow": {
+            "intent": "order_matcha_snow",
+            "domain": "default"
+          },
+          "a,can,i,matcha,order,snow": {
+            "intent": "order_matcha_snow",
+            "domain": "default"
+          },
+          "a,have,i,matcha,may,snow": {
+            "intent": "order_matcha_snow",
+            "domain": "default"
+          },
+          "can,i,my,order,see": {
+            "intent": "show order",
+            "domain": "default"
+          },
+          "black,can,i,milk,remov,tea,the": {
+            "intent": "remove_black_milk_tea",
+            "domain": "default"
+          },
+          "all,for,is,my,ok,order,that": {
+            "intent": "pay",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "menu": "default",
+          "milk tea": "default",
+          "chocolate": "default",
+          "order_black_milk_tea": "default",
+          "order_jasmine_milk_tea": "default",
+          "order_matcha_snow": "default",
+          "show order": "default",
+          "remove_black_milk_tea": "default",
+          "pay": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "Show me the menu",
+            "intent": "menu"
+          },
+          {
+            "domain": "default",
+            "utterance": "Can I have the menu?",
+            "intent": "menu"
+          },
+          {
+            "domain": "default",
+            "utterance": "Can I see the menu?",
+            "intent": "menu"
+          },
+          {
+            "domain": "default",
+            "utterance": "What do you have in this store?",
+            "intent": "menu"
+          },
+          {
+            "domain": "default",
+            "utterance": "Store Menu please",
+            "intent": "menu"
+          },
+          {
+            "domain": "default",
+            "utterance": "Do you have any milk tea?",
+            "intent": "milk tea"
+          },
+          {
+            "domain": "default",
+            "utterance": "Do you have anything that is sweet?",
+            "intent": "milk tea"
+          },
+          {
+            "domain": "default",
+            "utterance": "I want milk tea",
+            "intent": "milk tea"
+          },
+          {
+            "domain": "default",
+            "utterance": "Do you have anything that has sweet boba and milk pudding?",
+            "intent": "milk tea"
+          },
+          {
+            "domain": "default",
+            "utterance": "Do you have anything with cocao puff?",
+            "intent": "chocolate"
+          },
+          {
+            "domain": "default",
+            "utterance": "Do you have anything with cocao puff and milk?",
+            "intent": "chocolate"
+          },
+          {
+            "domain": "default",
+            "utterance": "Do you have chocolate?",
+            "intent": "chocolate"
+          },
+          {
+            "domain": "default",
+            "utterance": "I want to order black milk tea",
+            "intent": "order_black_milk_tea"
+          },
+          {
+            "domain": "default",
+            "utterance": "Can I have a black milk tea",
+            "intent": "order_black_milk_tea"
+          },
+          {
+            "domain": "default",
+            "utterance": "Can I order a black milk tea",
+            "intent": "order_black_milk_tea"
+          },
+          {
+            "domain": "default",
+            "utterance": "May i have a black milk tea",
+            "intent": "order_black_milk_tea"
+          },
+          {
+            "domain": "default",
+            "utterance": "I want to order jasmine milk tea",
+            "intent": "order_jasmine_milk_tea"
+          },
+          {
+            "domain": "default",
+            "utterance": "Can I have a jasmine milk tea",
+            "intent": "order_jasmine_milk_tea"
+          },
+          {
+            "domain": "default",
+            "utterance": "Can I order a jasmine milk tea",
+            "intent": "order_jasmine_milk_tea"
+          },
+          {
+            "domain": "default",
+            "utterance": "May i have a jasmine milk tea",
+            "intent": "order_jasmine_milk_tea"
+          },
+          {
+            "domain": "default",
+            "utterance": "I want to order matcha snow",
+            "intent": "order_matcha_snow"
+          },
+          {
+            "domain": "default",
+            "utterance": "Can I have a matcha snow",
+            "intent": "order_matcha_snow"
+          },
+          {
+            "domain": "default",
+            "utterance": "Can I order a matcha snow",
+            "intent": "order_matcha_snow"
+          },
+          {
+            "domain": "default",
+            "utterance": "May i have a matcha snow",
+            "intent": "order_matcha_snow"
+          },
+          {
+            "domain": "default",
+            "utterance": "Can I see my order?",
+            "intent": "show order"
+          },
+          {
+            "domain": "default",
+            "utterance": " Can I remove the black milk tea",
+            "intent": "remove_black_milk_tea"
+          },
+          {
+            "domain": "default",
+            "utterance": "OK that's all for my order.",
+            "intent": "pay"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "show": 1,
+              "me": 1,
+              "the": 1,
+              "menu": 1,
+              "can": 1,
+              "i": 1,
+              "have": 1,
+              "see": 1,
+              "what": 1,
+              "do": 1,
+              "you": 1,
+              "in": 1,
+              "this": 1,
+              "store": 1,
+              "pleas": 1,
+              "ani": 1,
+              "milk": 1,
+              "tea": 1,
+              "anyth": 1,
+              "that": 1,
+              "is": 1,
+              "sweet": 1,
+              "want": 1,
+              "has": 1,
+              "boba": 1,
+              "and": 1,
+              "pud": 1,
+              "with": 1,
+              "cocao": 1,
+              "puff": 1,
+              "chocol": 1,
+              "to": 1,
+              "order": 1,
+              "black": 1,
+              "a": 1,
+              "may": 1,
+              "jasmin": 1,
+              "matcha": 1,
+              "snow": 1,
+              "my": 1,
+              "remov": 1,
+              "ok": 1,
+              "all": 1,
+              "for": 1
+            },
+            "intents": {
+              "menu": 1,
+              "milk tea": 1,
+              "chocolate": 1,
+              "order_black_milk_tea": 1,
+              "order_jasmine_milk_tea": 1,
+              "order_matcha_snow": 1,
+              "show order": 1,
+              "remove_black_milk_tea": 1,
+              "pay": 1
+            },
+            "intentFeatures": {
+              "menu": {
+                "show": 1,
+                "me": 1,
+                "the": 1,
+                "menu": 1,
+                "can": 1,
+                "i": 1,
+                "have": 1,
+                "see": 1,
+                "what": 1,
+                "do": 1,
+                "you": 1,
+                "in": 1,
+                "this": 1,
+                "store": 1,
+                "pleas": 1
+              },
+              "milk tea": {
+                "do": 1,
+                "you": 1,
+                "have": 1,
+                "ani": 1,
+                "milk": 1,
+                "tea": 1,
+                "anyth": 1,
+                "that": 1,
+                "is": 1,
+                "sweet": 1,
+                "i": 1,
+                "want": 1,
+                "has": 1,
+                "boba": 1,
+                "and": 1,
+                "pud": 1
+              },
+              "chocolate": {
+                "do": 1,
+                "you": 1,
+                "have": 1,
+                "anyth": 1,
+                "with": 1,
+                "cocao": 1,
+                "puff": 1,
+                "and": 1,
+                "milk": 1,
+                "chocol": 1
+              },
+              "order_black_milk_tea": {
+                "i": 1,
+                "want": 1,
+                "to": 1,
+                "order": 1,
+                "black": 1,
+                "milk": 1,
+                "tea": 1,
+                "can": 1,
+                "have": 1,
+                "a": 1,
+                "may": 1
+              },
+              "order_jasmine_milk_tea": {
+                "i": 1,
+                "want": 1,
+                "to": 1,
+                "order": 1,
+                "jasmin": 1,
+                "milk": 1,
+                "tea": 1,
+                "can": 1,
+                "have": 1,
+                "a": 1,
+                "may": 1
+              },
+              "order_matcha_snow": {
+                "i": 1,
+                "want": 1,
+                "to": 1,
+                "order": 1,
+                "matcha": 1,
+                "snow": 1,
+                "can": 1,
+                "have": 1,
+                "a": 1,
+                "may": 1
+              },
+              "show order": {
+                "can": 1,
+                "i": 1,
+                "see": 1,
+                "my": 1,
+                "order": 1
+              },
+              "remove_black_milk_tea": {
+                "can": 1,
+                "i": 1,
+                "remov": 1,
+                "the": 1,
+                "black": 1,
+                "milk": 1,
+                "tea": 1
+              },
+              "pay": {
+                "ok": 1,
+                "that": 1,
+                "is": 1,
+                "all": 1,
+                "for": 1,
+                "my": 1,
+                "order": 1
+              }
+            },
+            "featuresToIntent": {
+              "show": [
+                "menu"
+              ],
+              "me": [
+                "menu"
+              ],
+              "the": [
+                "menu",
+                "remove_black_milk_tea"
+              ],
+              "menu": [
+                "menu"
+              ],
+              "can": [
+                "menu",
+                "order_black_milk_tea",
+                "order_jasmine_milk_tea",
+                "order_matcha_snow",
+                "show order",
+                "remove_black_milk_tea"
+              ],
+              "i": [
+                "menu",
+                "milk tea",
+                "order_black_milk_tea",
+                "order_jasmine_milk_tea",
+                "order_matcha_snow",
+                "show order",
+                "remove_black_milk_tea"
+              ],
+              "have": [
+                "menu",
+                "milk tea",
+                "chocolate",
+                "order_black_milk_tea",
+                "order_jasmine_milk_tea",
+                "order_matcha_snow"
+              ],
+              "see": [
+                "menu",
+                "show order"
+              ],
+              "what": [
+                "menu"
+              ],
+              "do": [
+                "menu",
+                "milk tea",
+                "chocolate"
+              ],
+              "you": [
+                "menu",
+                "milk tea",
+                "chocolate"
+              ],
+              "in": [
+                "menu"
+              ],
+              "this": [
+                "menu"
+              ],
+              "store": [
+                "menu"
+              ],
+              "pleas": [
+                "menu"
+              ],
+              "ani": [
+                "milk tea"
+              ],
+              "milk": [
+                "milk tea",
+                "chocolate",
+                "order_black_milk_tea",
+                "order_jasmine_milk_tea",
+                "remove_black_milk_tea"
+              ],
+              "tea": [
+                "milk tea",
+                "order_black_milk_tea",
+                "order_jasmine_milk_tea",
+                "remove_black_milk_tea"
+              ],
+              "anyth": [
+                "milk tea",
+                "chocolate"
+              ],
+              "that": [
+                "milk tea",
+                "pay"
+              ],
+              "is": [
+                "milk tea",
+                "pay"
+              ],
+              "sweet": [
+                "milk tea"
+              ],
+              "want": [
+                "milk tea",
+                "order_black_milk_tea",
+                "order_jasmine_milk_tea",
+                "order_matcha_snow"
+              ],
+              "has": [
+                "milk tea"
+              ],
+              "boba": [
+                "milk tea"
+              ],
+              "and": [
+                "milk tea",
+                "chocolate"
+              ],
+              "pud": [
+                "milk tea"
+              ],
+              "with": [
+                "chocolate"
+              ],
+              "cocao": [
+                "chocolate"
+              ],
+              "puff": [
+                "chocolate"
+              ],
+              "chocol": [
+                "chocolate"
+              ],
+              "to": [
+                "order_black_milk_tea",
+                "order_jasmine_milk_tea",
+                "order_matcha_snow"
+              ],
+              "order": [
+                "order_black_milk_tea",
+                "order_jasmine_milk_tea",
+                "order_matcha_snow",
+                "show order",
+                "pay"
+              ],
+              "black": [
+                "order_black_milk_tea",
+                "remove_black_milk_tea"
+              ],
+              "a": [
+                "order_black_milk_tea",
+                "order_jasmine_milk_tea",
+                "order_matcha_snow"
+              ],
+              "may": [
+                "order_black_milk_tea",
+                "order_jasmine_milk_tea",
+                "order_matcha_snow"
+              ],
+              "jasmin": [
+                "order_jasmine_milk_tea"
+              ],
+              "matcha": [
+                "order_matcha_snow"
+              ],
+              "snow": [
+                "order_matcha_snow"
+              ],
+              "my": [
+                "show order",
+                "pay"
+              ],
+              "remov": [
+                "remove_black_milk_tea"
+              ],
+              "ok": [
+                "pay"
+              ],
+              "all": [
+                "pay"
+              ],
+              "for": [
+                "pay"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "show",
+                "me",
+                "the",
+                "menu",
+                "can",
+                "i",
+                "have",
+                "see",
+                "what",
+                "do",
+                "you",
+                "in",
+                "this",
+                "store",
+                "pleas",
+                "ani",
+                "milk",
+                "tea",
+                "anyth",
+                "that",
+                "is",
+                "sweet",
+                "want",
+                "has",
+                "boba",
+                "and",
+                "pud",
+                "with",
+                "cocao",
+                "puff",
+                "chocol",
+                "to",
+                "order",
+                "black",
+                "a",
+                "may",
+                "jasmin",
+                "matcha",
+                "snow",
+                "my",
+                "remov",
+                "ok",
+                "all",
+                "for",
+                "nonefeature"
+              ],
+              "intents": [
+                "menu",
+                "milk tea",
+                "chocolate",
+                "order_black_milk_tea",
+                "order_jasmine_milk_tea",
+                "order_matcha_snow",
+                "show order",
+                "remove_black_milk_tea",
+                "pay",
+                "None"
+              ],
+              "perceptrons": [
+                [
+                  0.9815797805786133,
+                  0.9815797805786133,
+                  4.46187686920166,
+                  6.915992736816406,
+                  0.8548452258110046,
+                  0.30037611722946167,
+                  0.8231497406959534,
+                  0.763616144657135,
+                  2.803969144821167,
+                  -0.25725260376930237,
+                  -0.25725260376930237,
+                  2.803969144821167,
+                  2.803969144821167,
+                  4.606654167175293,
+                  1.8020429611206055,
+                  -0.19117262959480286,
+                  -2.4708337783813477,
+                  -2.155045509338379,
+                  -1.3076303005218506,
+                  -0.6865484714508057,
+                  -0.4403133988380432,
+                  -0.6865484714508057,
+                  -0.45465800166130066,
+                  -0.12652283906936646,
+                  -0.12652283906936646,
+                  -0.2211555689573288,
+                  -0.12652283906936646,
+                  -0.511063277721405,
+                  -0.511063277721405,
+                  -0.511063277721405,
+                  -1.3096319437026978,
+                  -0.24480676651000977,
+                  -1.7659515142440796,
+                  -1.2977763414382935,
+                  -1.4677166938781738,
+                  -0.002057828474789858,
+                  -0.1824326515197754,
+                  -0.896634578704834,
+                  -0.896634578704834,
+                  -1.0975836515426636,
+                  -0.6508568525314331,
+                  0,
+                  0,
+                  0,
+                  -0.914094865322113,
+                  0.9540412034048186
+                ],
+                [
+                  -0.03692971542477608,
+                  -0.03692971542477608,
+                  -1.1069475412368774,
+                  -0.03692971542477608,
+                  -2.5342812538146973,
+                  0.6291959285736084,
+                  -1.0568771362304688,
+                  0,
+                  -0.8165384531021118,
+                  1.5713773965835571,
+                  1.5713773965835571,
+                  -0.8165384531021118,
+                  -0.8165384531021118,
+                  -0.8165384531021118,
+                  0,
+                  3.88460373878479,
+                  3.3807835578918457,
+                  4.51370096206665,
+                  1.3821964263916016,
+                  3.2999744415283203,
+                  3.028059244155884,
+                  3.8874714374542236,
+                  4.519266128540039,
+                  0.26745644211769104,
+                  0.26745644211769104,
+                  -1.1355392932891846,
+                  0.26745644211769104,
+                  -2.4103879928588867,
+                  -2.4103879928588867,
+                  -2.4103879928588867,
+                  -2.8248143196105957,
+                  -4.3471503257751465,
+                  -5.126687526702881,
+                  -4.32541036605835,
+                  -2.8187415599823,
+                  -1.3483691215515137,
+                  -3.8984897136688232,
+                  -0.006505782715976238,
+                  -0.006505782715976238,
+                  -0.5147799253463745,
+                  -1.0639091730117798,
+                  -0.5147799253463745,
+                  -0.5147799253463745,
+                  -0.5147799253463745,
+                  -0.4379133880138397,
+                  0.5566491401176953
+                ],
+                [
+                  -0.07867390662431717,
+                  -0.07867390662431717,
+                  -0.22273696959018707,
+                  -0.22755219042301178,
+                  -0.6159133911132812,
+                  -1.0879487991333008,
+                  1.69559645652771,
+                  0,
+                  -1.819961667060852,
+                  2.5691604614257812,
+                  2.5691604614257812,
+                  -1.819961667060852,
+                  -1.819961667060852,
+                  -1.824766993522644,
+                  -0.0024027028121054173,
+                  -2.28292179107666,
+                  -1.7774584293365479,
+                  -3.131533622741699,
+                  -0.15715114772319794,
+                  -2.675929069519043,
+                  -1.835134744644165,
+                  -2.6366522312164307,
+                  -0.1151610016822815,
+                  -0.736840009689331,
+                  -0.736840009689331,
+                  1.3551604747772217,
+                  -0.736840009689331,
+                  2.480490207672119,
+                  2.480490207672119,
+                  2.480490207672119,
+                  6.827169895172119,
+                  -0.1151610016822815,
+                  -0.21445678174495697,
+                  -0.489896297454834,
+                  -0.7665965557098389,
+                  -0.2752169072628021,
+                  -0.14345908164978027,
+                  -0.08979441225528717,
+                  -0.08979441225528717,
+                  -0.019638217985630035,
+                  0,
+                  -0.019638217985630035,
+                  -0.019638217985630035,
+                  -0.019638217985630035,
+                  -0.4292789697647095,
+                  0.45886091183553374
+                ],
+                [
+                  0,
+                  0,
+                  -4.2616400718688965,
+                  0,
+                  -0.6829422116279602,
+                  -0.6283133029937744,
+                  1.9350379705429077,
+                  -0.24014142155647278,
+                  -0.0015730151208117604,
+                  -0.8590978384017944,
+                  -0.8590978384017944,
+                  -0.0015730151208117604,
+                  -0.0015730151208117604,
+                  -0.0015730151208117604,
+                  0,
+                  -0.8377568125724792,
+                  0.6849232316017151,
+                  0.6878867149353027,
+                  -0.0021037838887423277,
+                  -0.22302120923995972,
+                  -0.22205457091331482,
+                  -0.0004785305936820805,
+                  0.35601308941841125,
+                  -0.0004785305936820805,
+                  -0.0004785305936820805,
+                  -0.0021037838887423277,
+                  -0.0004785305936820805,
+                  -0.0011766307288780808,
+                  -0.0011766307288780808,
+                  -0.0011766307288780808,
+                  0,
+                  2.14949369430542,
+                  2.4249331951141357,
+                  9.309441566467285,
+                  3.5358943939208984,
+                  -0.2977515757083893,
+                  -5.93558931350708,
+                  -1.9115073680877686,
+                  -1.9115073680877686,
+                  -0.4815802276134491,
+                  -4.2616400718688965,
+                  -0.22205457091331482,
+                  -0.22205457091331482,
+                  -0.22205457091331482,
+                  1.991124207734174e-7,
+                  -0.8601050611018851
+                ],
+                [
+                  0,
+                  0,
+                  -1.1458803415298462,
+                  -0.13392245769500732,
+                  -0.020194444805383682,
+                  -0.4337504208087921,
+                  1.0172429084777832,
+                  -0.48085880279541016,
+                  -0.03288627788424492,
+                  -1.1634635925292969,
+                  -1.1634635925292969,
+                  -0.03288627788424492,
+                  -0.03288627788424492,
+                  -0.03288627788424492,
+                  0,
+                  -0.9140190482139587,
+                  1.0459948778152466,
+                  1.188535213470459,
+                  -0.11601082235574722,
+                  -0.12082050740718842,
+                  -0.03463481366634369,
+                  -0.049129340797662735,
+                  -0.6810057759284973,
+                  -0.049129340797662735,
+                  -0.049129340797662735,
+                  -0.11601082235574722,
+                  -0.049129340797662735,
+                  -0.030034475028514862,
+                  -0.030034475028514862,
+                  -0.030034475028514862,
+                  0,
+                  2.417241334915161,
+                  1.431702971458435,
+                  -4.660782337188721,
+                  2.0883700847625732,
+                  0.2690749168395996,
+                  10.051202774047852,
+                  -1.8546561002731323,
+                  -1.8546561002731323,
+                  -0.5677764415740967,
+                  -0.8672773241996765,
+                  -0.03463481366634369,
+                  -0.03463481366634369,
+                  -0.03463481366634369,
+                  -0.006002654787153006,
+                  -0.894144129606711
+                ],
+                [
+                  -0.02751849591732025,
+                  -0.02751849591732025,
+                  -1.2201396226882935,
+                  -0.8198034167289734,
+                  0.013866391964256763,
+                  1.2325907945632935,
+                  0.5926980972290039,
+                  -1.111764907836914,
+                  -0.0750957578420639,
+                  -0.45784348249435425,
+                  -0.45784348249435425,
+                  -0.0750957578420639,
+                  -0.0750957578420639,
+                  -0.0750957578420639,
+                  0,
+                  -0.047381822019815445,
+                  -2.0711939334869385,
+                  -2.0547642707824707,
+                  -0.1486630141735077,
+                  -0.21031592786312103,
+                  -0.1794624626636505,
+                  -0.08047273010015488,
+                  1.0735844373703003,
+                  -0.008214715868234634,
+                  -0.008214715868234634,
+                  -0.008214715868234634,
+                  -0.008214715868234634,
+                  -0.04396474361419678,
+                  -0.04396474361419678,
+                  -0.04396474361419678,
+                  -0.0420253686606884,
+                  1.1747547388076782,
+                  0.7271517515182495,
+                  -1.2998327016830444,
+                  2.2951090335845947,
+                  0.14634621143341064,
+                  -0.46009212732315063,
+                  4.934749603271484,
+                  4.934749603271484,
+                  -1.0501140356063843,
+                  -0.20174427330493927,
+                  -0.09422769397497177,
+                  -0.09422769397497177,
+                  -0.09422769397497177,
+                  -0.18375264108181,
+                  0.18726283752672454
+                ],
+                [
+                  -0.014157217927277088,
+                  -0.014157217927277088,
+                  -3.1033058166503906,
+                  -2.9528398513793945,
+                  1.5316293239593506,
+                  1.0047595500946045,
+                  -0.3792246878147125,
+                  3.9759387969970703,
+                  -0.006281835027039051,
+                  -0.013854566030204296,
+                  -0.013854566030204296,
+                  -0.006281835027039051,
+                  -0.006281835027039051,
+                  -0.006281835027039051,
+                  0,
+                  0,
+                  -1.2347973585128784,
+                  -1.2347973585128784,
+                  -0.0019274993101134896,
+                  -1.5095466375350952,
+                  -1.5095466375350952,
+                  0,
+                  -0.5066091418266296,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.0019274993101134896,
+                  -0.0019274993101134896,
+                  -0.0019274993101134896,
+                  -0.0003111650003120303,
+                  -0.43735864758491516,
+                  2.7613234519958496,
+                  -0.6657782196998596,
+                  -2.011317729949951,
+                  0,
+                  -0.483153373003006,
+                  -1.4496456384658813,
+                  -1.4496456384658813,
+                  5.130016326904297,
+                  -0.07787355035543442,
+                  -1.5095466375350952,
+                  -1.5095466375350952,
+                  -1.5095466375350952,
+                  -0.07515984773635864,
+                  -0.3104287697014601
+                ],
+                [
+                  -0.36128291487693787,
+                  -0.36128291487693787,
+                  3.5246336460113525,
+                  -2.2588138580322266,
+                  1.1117348670959473,
+                  -0.4487608075141907,
+                  -2.2083511352539062,
+                  -1.3408825397491455,
+                  -0.004693993832916021,
+                  -0.18128672242164612,
+                  -0.18128672242164612,
+                  -0.004693993832916021,
+                  -0.004693993832916021,
+                  -0.004693993832916021,
+                  0,
+                  -0.09373121708631516,
+                  1.2483350038528442,
+                  1.3182120323181152,
+                  -0.047282975167036057,
+                  -0.06028951704502106,
+                  -0.025126993656158447,
+                  -0.022849155589938164,
+                  -1.534274697303772,
+                  -0.022849155589938164,
+                  -0.022849155589938164,
+                  -0.047282975167036057,
+                  -0.022849155589938164,
+                  -0.013386053033173084,
+                  -0.013386053033173084,
+                  -0.013386053033173084,
+                  0,
+                  -0.6816043257713318,
+                  -2.103945255279541,
+                  2.2748310565948486,
+                  -2.797969341278076,
+                  -0.012555958703160286,
+                  0,
+                  0,
+                  0,
+                  -0.025126993656158447,
+                  5.782506942749023,
+                  -0.025126993656158447,
+                  -0.025126993656158447,
+                  -0.025126993656158447,
+                  -0.06417861580848694,
+                  -0.5666278205109636
+                ],
+                [
+                  -0.05872210115194321,
+                  -0.05872210115194321,
+                  -0.1238706037402153,
+                  -0.19110506772994995,
+                  -1.031609296798706,
+                  -1.3454968929290771,
+                  -0.8351219296455383,
+                  -0.7881474494934082,
+                  -0.020804645493626595,
+                  -0.7972960472106934,
+                  -0.7972960472106934,
+                  -0.020804645493626595,
+                  -0.020804645493626595,
+                  -0.08906111866235733,
+                  -0.051201388239860535,
+                  -0.014657248742878437,
+                  -0.37044787406921387,
+                  -0.3144869804382324,
+                  -0.7290930151939392,
+                  1.7647695541381836,
+                  1.8207978010177612,
+                  -0.7290930151939392,
+                  -0.28723448514938354,
+                  -0.028973717242479324,
+                  -0.028973717242479324,
+                  -0.028973717242479324,
+                  -0.028973717242479324,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.26445651054382324,
+                  1.2642878293991089,
+                  -0.13755857944488525,
+                  -0.18040183186531067,
+                  0,
+                  -0.10246312618255615,
+                  -0.19517852365970612,
+                  -0.19517852365970612,
+                  1.7600598335266113,
+                  0,
+                  2.5511133670806885,
+                  2.5511133670806885,
+                  2.5511133670806885,
+                  -0.1404748111963272,
+                  0.022387425474165796
+                ],
+                [
+                  -0.5462220907211304,
+                  -0.5462220907211304,
+                  -0.6767145395278931,
+                  -1.4781585931777954,
+                  -0.4220881164073944,
+                  -1.2299786806106567,
+                  -1.0452073812484741,
+                  -0.261355459690094,
+                  -0.10380353778600693,
+                  -0.8481450080871582,
+                  -0.8481450080871582,
+                  -0.10380353778600693,
+                  -0.10380353778600693,
+                  -0.9101358652114868,
+                  -0.7949680089950562,
+                  -0.05669499933719635,
+                  -0.6631126999855042,
+                  -0.6543742418289185,
+                  -0.201277956366539,
+                  -0.4240388572216034,
+                  -0.4153004288673401,
+                  -0.06206166744232178,
+                  -0.6744584441184998,
+                  -0.004526250064373016,
+                  -0.004526250064373016,
+                  -0.004526250064373016,
+                  -0.004526250064373016,
+                  -0.13502778112888336,
+                  -0.13502778112888336,
+                  -0.13502778112888336,
+                  -0.4689118266105652,
+                  -0.1265968680381775,
+                  -0.7758857607841492,
+                  -0.03979118913412094,
+                  -0.22831407189369202,
+                  -0.12546616792678833,
+                  -0.00589318061247468,
+                  -0.30940380692481995,
+                  -0.30940380692481995,
+                  -0.5497202277183533,
+                  0,
+                  -0.3578253984451294,
+                  -0.3578253984451294,
+                  -0.3578253984451294,
+                  10.287839889526367,
+                  3.281671678193814
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "Show me the menu"
+      ],
+      [
+        "en",
+        "Can I have the menu?"
+      ],
+      [
+        "en",
+        "Can I see the menu?"
+      ],
+      [
+        "en",
+        "What do you have in this store?"
+      ],
+      [
+        "en",
+        "Store Menu please"
+      ],
+      [
+        "en",
+        "Do you have any milk tea?"
+      ],
+      [
+        "en",
+        "Do you have anything that is sweet?"
+      ],
+      [
+        "en",
+        "I want milk tea"
+      ],
+      [
+        "en",
+        "Do you have anything that has sweet boba and milk pudding?"
+      ],
+      [
+        "en",
+        "Do you have anything with cocao puff?"
+      ],
+      [
+        "en",
+        "Do you have anything with cocao puff and milk?"
+      ],
+      [
+        "en",
+        "Do you have chocolate?"
+      ],
+      [
+        "en",
+        "I want to order black milk tea"
+      ],
+      [
+        "en",
+        "Can I have a black milk tea"
+      ],
+      [
+        "en",
+        "Can I order a black milk tea"
+      ],
+      [
+        "en",
+        "May i have a black milk tea"
+      ],
+      [
+        "en",
+        "I want to order jasmine milk tea"
+      ],
+      [
+        "en",
+        "Can I have a jasmine milk tea"
+      ],
+      [
+        "en",
+        "Can I order a jasmine milk tea"
+      ],
+      [
+        "en",
+        "May i have a jasmine milk tea"
+      ],
+      [
+        "en",
+        "I want to order matcha snow"
+      ],
+      [
+        "en",
+        "Can I have a matcha snow"
+      ],
+      [
+        "en",
+        "Can I order a matcha snow"
+      ],
+      [
+        "en",
+        "May i have a matcha snow"
+      ],
+      [
+        "en",
+        "Can I see my order?"
+      ],
+      [
+        "en",
+        " Can I remove the black milk tea"
+      ],
+      [
+        "en",
+        "OK that's all for my order."
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {}
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
